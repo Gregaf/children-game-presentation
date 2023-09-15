@@ -1,0 +1,59 @@
+.button {
+    color: rgb(29, 29, 29);
+    background-color: rgb(255, 255, 255);
+    -unity-font-definition: initial;
+    -unity-font: url('project://database/Assets/Jumbalo_D.otf?fileID=12800000&guid=e141db9deb1a78848b05a5dbb751b098&type=3#Jumbalo_D');
+    width: auto;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    font-size: 24px;
+    margin-left: 16px;
+    margin-right: 16px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    transition-duration: 250ms;
+    transition-timing-function: ease-out;
+}
+
+.button:hover {
+    color: rgb(29, 29, 29);
+    -unity-font-definition: initial;
+    -unity-font: url('project://database/Assets/Jumbalo_D.otf?fileID=12800000&guid=e141db9deb1a78848b05a5dbb751b098&type=3#Jumbalo_D');
+    width: auto;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    font-size: 24px;
+    margin-left: 16px;
+    margin-right: 16px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    transition-duration: 250ms, 350ms;
+    transition-timing-function: ease-in, ease-out-bounce;
+    transition-property: color, scale;
+    scale: 1.5 1.5;
+    background-color: rgba(125, 125, 125, 255);
+}
+
+.button:active {
+    color: rgb(29, 29, 29);
+    background-color: rgb(67, 67, 67);
+    -unity-font-definition: initial;
+    -unity-font: url('project://database/Assets/Jumbalo_D.otf?fileID=12800000&guid=e141db9deb1a78848b05a5dbb751b098&type=3#Jumbalo_D');
+    width: auto;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    font-size: 24px;
+    margin-left: 16px;
+    margin-right: 16px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    transition-duration: 250ms;
+    transition-timing-function: ease-out-bounce;
+    scale: 0.8 0.8;
+}

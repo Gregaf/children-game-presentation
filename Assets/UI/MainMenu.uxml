@@ -1,0 +1,10 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI/style.uss?fileID=7433441132597879392&amp;guid=ed7712af905647343901677a682066b2&amp;type=3#style" />
+    <ui:VisualElement name="menu-container" style="flex-grow: 1; align-items: flex-end; justify-content: space-between; padding-left: 10%; padding-right: 10%; padding-top: 10%; padding-bottom: 10%;">
+        <ui:Label text="Fruitfall Frenzy" display-tooltip-when-elided="true" name="title" enable-rich-text="true" style="color: rgb(255, 255, 255); font-size: 84px; -unity-text-align: upper-right; width: 80%; -unity-font: url(&apos;project://database/Assets/Jumbalo_D.otf?fileID=12800000&amp;guid=e141db9deb1a78848b05a5dbb751b098&amp;type=3#Jumbalo_D&apos;); -unity-font-definition: initial;" />
+        <ui:VisualElement name="button-container" style="width: auto; height: auto; justify-content: flex-start; padding-left: 8px; padding-right: 8px; padding-top: 8px; padding-bottom: 8px;">
+            <ui:Button text="Start Game" display-tooltip-when-elided="true" name="start-button" class="button" style="width: auto;" />
+            <ui:Button text="Quit" display-tooltip-when-elided="true" name="quit-button" class="button" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

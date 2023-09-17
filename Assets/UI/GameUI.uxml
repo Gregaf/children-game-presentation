@@ -1,0 +1,10 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI/style.uss?fileID=7433441132597879392&amp;guid=ed7712af905647343901677a682066b2&amp;type=3#style" />
+    <ui:VisualElement name="root-cont" style="flex-grow: 1; justify-content: space-between; padding-left: 2%; padding-right: 2%; padding-top: 2%; padding-bottom: 2%; font-size: 36px;">
+        <ui:VisualElement name="top-cont" style="flex-direction: row; justify-content: space-between;">
+            <ui:VisualElement name="health-cont" />
+            <ui:Label text="000 s" display-tooltip-when-elided="true" name="timer-label" class="gui-text" />
+            <ui:Label text="00" display-tooltip-when-elided="true" name="score-label" enable-rich-text="true" class="gui-text" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

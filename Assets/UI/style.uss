@@ -35,7 +35,7 @@
     transition-timing-function: ease-in, ease-out-bounce;
     transition-property: color, scale;
     scale: 1.5 1.5;
-    background-color: rgba(125, 125, 125, 255);
+    background-color: rgb(125, 125, 125);
 }
 
 .button:active {
@@ -56,4 +56,10 @@
     transition-duration: 250ms;
     transition-timing-function: ease-out-bounce;
     scale: 0.8 0.8;
+}
+
+.gui-text {
+    -unity-font-definition: initial;
+    -unity-font: url('project://database/Assets/Jumbalo_D.otf?fileID=12800000&guid=e141db9deb1a78848b05a5dbb751b098&type=3#Jumbalo_D');
+    color: rgba(255, 255, 255, 255);
 }

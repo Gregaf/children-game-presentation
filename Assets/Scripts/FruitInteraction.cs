@@ -7,7 +7,6 @@ public class FruitInteraction : MonoBehaviour, ICatchable
 
     public void Catch()
     {
-        // Invoke event to notify listeners of heal amount, and score value
         throw new System.NotImplementedException();
     }
 

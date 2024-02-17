@@ -4,9 +4,9 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance { get; private set; }
 
-    public GameSettingsSO gameSettings; // Reference to the ScriptableObject containing game settings
+    public GameSettingsSO gameSettings;
     public float remainingTime { get; private set; }
-    public int currentScore { get; private set; } // Current game score
+    public int currentScore { get; private set; }
 
     private bool isGameRunning = false;
 
@@ -30,7 +30,7 @@ public class GameManager : MonoBehaviour
         }
 
         remainingTime = gameSettings.gameTimeLimit;
-        currentScore = 0; // Initialize the score to zero
+        currentScore = 0;
     }
 
     private void Start()
@@ -44,7 +44,7 @@ public class GameManager : MonoBehaviour
     {
         if (isGameRunning)
         {
-            // Update the remaining time and check for game over
+
             remainingTime -= Time.deltaTime;
             if (remainingTime <= 0f)
             {
@@ -55,19 +55,16 @@ public class GameManager : MonoBehaviour
 
     public void StartGame()
     {
-        // Start the game and timer
         isGameRunning = true;
     }
 
     public void StopGame()
     {
-        // Stop the game and timer
         isGameRunning = false;
     }
 
     private void GameOver()
     {
-        // Handle game over logic here
         Debug.Log("Game Over!");
         Debug.Log("Final Score: " + currentScore);
         isGameRunning = false;

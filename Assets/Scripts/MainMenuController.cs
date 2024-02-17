@@ -58,13 +58,9 @@ public class MainMenuController : MonoBehaviour
         // Impose a second or two, for fake load time.
         while (!asyncOperation.isDone)
         {
-            // Calculate the loading progress (0 to 1)
             float progress = Mathf.Clamp01(asyncOperation.progress / 0.9f); // 0.9f is the completion threshold
 
             Debug.Log(progress);
-            // Invoke load screen drop down
-
-            // Update the progress bar
 
             yield return null;
         }

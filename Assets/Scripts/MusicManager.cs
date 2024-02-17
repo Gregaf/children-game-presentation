@@ -55,7 +55,6 @@ public class MusicManager : MonoBehaviour
         }
         else
         {
-            // Start a crossfade
             CrossfadeToNewTrack(musicClip, volume);
         }
     }

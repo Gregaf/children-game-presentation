@@ -21,27 +21,24 @@ public class FallingObjectSpawnerEditor : Editor
 
 public class FallingObjectSpawner : MonoBehaviour
 {
-    public FallingObjectData[] objectVariations; // Array of FallingObjectData for object variations
-    public float spawnRadius = 5f; // Radius within which objects will be spawned
-    public float spawnInterval = 2f; // Time interval between spawns
-    public int maxSpawnAttempts = 30; // Maximum attempts to find a suitable spawn point
+    public FallingObjectData[] objectVariations;
+    public float spawnRadius = 5f;
+    public float spawnInterval = 2f;
+    public int maxSpawnAttempts = 30;
 
     private float nextSpawnTime;
     private List<Vector3> spawnPoints = new List<Vector3>();
 
     private void Start()
     {
-        // Initialize the next spawn time
         nextSpawnTime = Time.time + spawnInterval;
     }
 
     private void Update()
     {
-        // Check if it's time to spawn a new object
         if (Time.time >= nextSpawnTime)
         {
             SpawnObject();
-            // Set the next spawn time
             nextSpawnTime = Time.time + spawnInterval;
         }
     }
@@ -55,7 +52,6 @@ public class FallingObjectSpawner : MonoBehaviour
             totalWeight += objectDataWithWeight.weight;
         }
 
-        // Generate a random value within the total weight range
         float randomValue = Random.Range(0f, totalWeight);
 
         // Select the object based on the weighted probabilities
@@ -72,21 +68,16 @@ public class FallingObjectSpawner : MonoBehaviour
 
         if (selectedObject == null)
         {
-            // Fallback to the first object if selection fails (due to rounding errors)
             selectedObject = objectVariations[0];
         }
 
-        // Randomly select an object variation
         int randomIndex = Random.Range(0, objectVariations.Length);
         FallingObjectData objectData = objectVariations[randomIndex];
 
-        // Generate a random position within the spawn radius using Poisson Disk Sampling
         Vector3 spawnPosition = GenerateRandomPoint();
 
-        // Create a clone of the selected object prefab at the spawn position
         GameObject spawnedObject = Instantiate(objectData.objectPrefab, spawnPosition, Quaternion.identity);
 
-        // Apply a random falling speed to the spawned object
         Rigidbody rb = spawnedObject.GetComponent<Rigidbody>();
         if (rb != null)
         {
@@ -114,7 +105,6 @@ public class FallingObjectSpawner : MonoBehaviour
                 }
             }
 
-            // If the point is valid, add it to the list of spawn points and return it
             if (validPoint)
             {
                 spawnPoints.Add(randomPoint);
@@ -122,7 +112,6 @@ public class FallingObjectSpawner : MonoBehaviour
             }
         }
 
-        // If no valid point is found, return a random point within the spawn radius
         return Random.insideUnitSphere * spawnRadius + transform.position;
     }
 }

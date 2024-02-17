@@ -40,13 +40,11 @@ public class AudioManager : MonoBehaviour
         }
     }
 
-    // Play a sound
     public void PlaySound(AudioClip clip, float volume = 1.0f)
     {
         audioSource.PlayOneShot(clip, volume);
     }
 
-    // Stop all audio
     public void StopAll()
     {
         audioSource.Stop();
